@@ -18,6 +18,7 @@ Write code to send an HTTP request to the website and get the HTML content:url =
 response = requests.get(url)
 html_content = response.text
 Parse the HTML content using Beautiful Soup:soup = BeautifulSoup(html_content, 'html.parser')
+<br>
 Extract the desired data using Beautiful Soup's methods and CSS selectors. For example, to extract all the links from the webpage:links = soup.find_all('a')
 for link in links:
     print(link.get('href'))
